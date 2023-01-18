@@ -1,0 +1,24 @@
+site_name: AxPlor
+site_url: https://example.com
+theme:
+  name: readthedocs
+  navigation_depth: 2
+markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+nav:
+  - Home: 'index.md'
+  - Vision Statement: 'Vision-Statement.md'
+  - Why Choose Us?: 'Why-Choose-Us.md'
+  - Costs:
+    - Cost of R&D: 'Costs/Research-and-Development.md'
+    - Cost of Tests: 'Costs/Tests.md'
+  - Schedule a Trip!:
+    - Tickets: 'Schedule-a-Trip/Tickets.md'
+    - Go VIP!: 'Schedule-a-Trip/Go-VIP.md'
+    - Plan Your Trip: 'Schedule-a-Trip/Plan-Your-Trip.md'
+    - Launch & Recovery: 'Schedule-a-Trip/Plan-Your-Launch-and-Recovery.md'
+    - The Cost of Your Trip: 'Schedule-a-Trip/Trip-Cost.md'
