@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://example.com/Schedule-a-Trip/Trip-Cost/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>The Cost of Your Trip - AxPlor</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "The Cost of Your Trip";
+        var mkdocs_page_input_path = "Schedule-a-Trip/Trip-Cost.md";
+        var mkdocs_page_url = "/Schedule-a-Trip/Trip-Cost/";
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> AxPlor
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Vision-Statement/">Vision Statement</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Why-Choose-Us/">Why Choose Us?</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Costs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Costs/Research-and-Development/">Cost of R&D</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Costs/Tests/">Cost of Tests</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Schedule a Trip!</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Tickets/">Tickets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Go-VIP/">Go VIP!</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Plan-Your-Trip/">Plan Your Trip</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Plan-Your-Launch-and-Recovery/">Launch & Recovery</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">The Cost of Your Trip</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#how-much-does-your-trip-cost">How Much Does Your Trip Cost?</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">AxPlor</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Schedule a Trip! &raquo;</li>
+      <li>The Cost of Your Trip</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="axplor-reaching-for-the-stars">AXPLOR - REACHING FOR THE STARS</h1>
+<h2 id="how-much-does-your-trip-cost">How Much Does Your Trip Cost?</h2>
+<p>Alright, now that you've decided all the details of your trip, enter all that information in this table to calculate how much your trip will cost per person. At the bottom of the page, you can find your ticket.</p>
+<p>Children younger than 7 years old are not allowed, and no more than <span id="max_num_people">7</span> passengers are allowed on one ticket</p>
+<p>Your chosen rocket is: 
+    <select id="chosen_rocket" name="rockets" oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+        <option value="Rocket 56">Rocket 56</option>
+        <option value="Rocket 61">Rocket 61</option>
+        <option value="Rocket 66">Rocket 66</option>
+        <option value="Rocket 75">Rocket 75</option>
+    </select>
+</p>
+
+<p>Will you be purchasing a VIP ticket?
+    <select id="vip_ticket" name="vip" oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+    </select>
+</p>
+
+<p>What day will you be leaving?
+    <input type="date" id="outbound_date" name="outbound_date" value="2023-01-01" oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+    Will your outbound trip be at noon or 6:00 P.M.?
+    <select id="outbound_time" name="outbound_time" oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+        <option value="Noon">12:00 P.M.</option>
+        <option value="Evening">6:00 P.M.</option>
+    </select>
+</p>
+
+<p>What day will you be returning?
+    <input type="date" id="return_date" name="return_date" value="2023-12-31" oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+    Will your return trip be at noon or 6:00 P.M.?
+    <select id="return_time" name="return_time" oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+        <option value="Noon">12:00 P.M.</option>
+        <option value="Evening">6:00 P.M.</option>
+    </select>
+</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">How many people?</th>
+<th align="center">Cost per Individual</th>
+<th align="center">Total Cost (in $)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Children (7 - 17)</td>
+<td align="center">
+    <label for="num_adults">Number of children: </label>
+    <input type="number" id="num_children" name="num_children" min="0" max="99" value=0 oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+</td>
+<td align="center" id="price_for_children">$400 per child</td>
+<td align="center">$<span id="children_costs">0</span></td>
+</tr>
+<tr>
+<td align="center">Adults (18 - 64)</td>
+<td align="center">
+    <label for="num_adults">Number of adults: </label>
+    <input type="number" id="num_adults" name="num_adults" min="0" max="99" value=0 oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+</td>
+<td align="center" id="price_for_adults">$700 per adult</td>
+<td align="center">$<span id="adults_costs">0</span></td>
+</tr>
+<tr>
+<td align="center">Seniors (65+)</td>
+<td align="center">
+    <label for="num_adults">Number of seniors: </label>
+    <input type="number" id="num_seniors" name="num_seniors" min="0" max="99" value=0 oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+</td>
+<td align="center" id="price_for_seniors">$400 per senior</td>
+<td align="center">$<span id="seniors_costs">0</span></td>
+</tr>
+<tr>
+<td align="center">Total</td>
+<td align="center" id="total-people">0</td>
+<td align="center" id="avg-cost">Avg. cost per passenger: <br>$0</td>
+<td align="center">$<span id="total-cost">0</span></td>
+</tbody>
+</table>
+
+<iframe src="../PrintedTicket.html" height="500" width="600" title="Ticket" id="TicketFrame" name="TicketFrame" style="border-style: solid"></iframe>
+
+<p><button id="TicketPrint" onclick="PrintTicket()">Print Ticket</button></p>
+<p id="TESTER"></p>
+
+<script type="text/javascript" src="../../JS_Code_File.js"></script>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Plan-Your-Launch-and-Recovery/" class="btn btn-neutral float-left" title="Launch & Recovery"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Plan-Your-Launch-and-Recovery/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
