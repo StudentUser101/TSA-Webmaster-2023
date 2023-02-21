@@ -102,8 +102,93 @@
               
                 <h1 id="axplor-reaching-for-the-stars">AXPLOR - REACHING FOR THE STARS</h1>
 <h2 id="how-much-does-your-trip-cost">How Much Does Your Trip Cost?</h2>
-<p>Alright, now that you've decided all the details of your trip, enter all that information in this table to calculate how much your trip will cost per person.</p>
-<p><em>Table has yet to be created</em></p>
+<p>Alright, now that you've decided all the details of your trip, enter all that information in this table to calculate how much your trip will cost per person. At the bottom of the page, you can find your ticket.</p>
+<p>Children younger than 7 years old are not allowed, and no more than <span id="max_num_people">7</span> passengers are allowed on one ticket</p>
+<p>Your chosen rocket is: 
+    <select id="chosen_rocket" name="rockets" oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+        <option value="Rocket 56">Rocket 56</option>
+        <option value="Rocket 61">Rocket 61</option>
+        <option value="Rocket 66">Rocket 66</option>
+        <option value="Rocket 75">Rocket 75</option>
+    </select>
+</p>
+
+<p>Will you be purchasing a VIP ticket?
+    <select id="vip_ticket" name="vip" oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+    </select>
+</p>
+
+<p>What day will you be leaving?
+    <input type="date" id="outbound_date" name="outbound_date" value="2023-01-01" oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+    Will your outbound trip be at noon or 6:00 P.M.?
+    <select id="outbound_time" name="outbound_time" oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+        <option value="Noon">12:00 P.M.</option>
+        <option value="Evening">6:00 P.M.</option>
+    </select>
+</p>
+
+<p>What day will you be returning?
+    <input type="date" id="return_date" name="return_date" value="2023-12-31" oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+    Will your return trip be at noon or 6:00 P.M.?
+    <select id="return_time" name="return_time" oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+        <option value="Noon">12:00 P.M.</option>
+        <option value="Evening">6:00 P.M.</option>
+    </select>
+</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">How many people?</th>
+<th align="center">Cost per Individual</th>
+<th align="center">Total Cost (in $)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Children (7 - 17)</td>
+<td align="center">
+    <label for="num_adults">Number of children: </label>
+    <input type="number" id="num_children" name="num_children" min="0" max="99" value=0 oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+</td>
+<td align="center" id="price_for_children">$400 per child</td>
+<td align="center">$<span id="children_costs">0</span></td>
+</tr>
+<tr>
+<td align="center">Adults (18 - 64)</td>
+<td align="center">
+    <label for="num_adults">Number of adults: </label>
+    <input type="number" id="num_adults" name="num_adults" min="0" max="99" value=0 oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+</td>
+<td align="center" id="price_for_adults">$700 per adult</td>
+<td align="center">$<span id="adults_costs">0</span></td>
+</tr>
+<tr>
+<td align="center">Seniors (65+)</td>
+<td align="center">
+    <label for="num_adults">Number of seniors: </label>
+    <input type="number" id="num_seniors" name="num_seniors" min="0" max="99" value=0 oninput='UpdateTicketChoice("children", "adults", "seniors", "total-people", "total-cost", "Avg. cost per passenger: <br>$", "avg-cost", "max_num_people") '>
+</td>
+<td align="center" id="price_for_seniors">$400 per senior</td>
+<td align="center">$<span id="seniors_costs">0</span></td>
+</tr>
+<tr>
+<td align="center">Total</td>
+<td align="center" id="total-people">0</td>
+<td align="center" id="avg-cost">Avg. cost per passenger: <br>$0</td>
+<td align="center">$<span id="total-cost">0</span></td>
+</tbody>
+</table>
+
+<iframe src="../PrintedTicket.html" height="500" width="600" title="Ticket" id="TicketFrame" name="TicketFrame" style="border-style: solid"></iframe>
+
+<p><button id="TicketPrint" onclick="PrintTicket()">Print Ticket</button></p>
+<p id="TESTER"></p>
+
+<script type="text/javascript" src="../../JS_Code_File.js"></script>
               
             </div>
           </div><footer>
